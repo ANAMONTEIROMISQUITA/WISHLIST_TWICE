@@ -3,9 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+}
+
+body {
     background-color: #e3abd3;
 }
 
+/* HEADER */
 .header {
     width: 100%;
     padding: 20px;
@@ -32,6 +36,7 @@
     font-size: 16px;
     cursor: pointer;
     border-radius: 6px;
+    color: white;
 }
 
 .dropbtn:hover {
@@ -46,9 +51,8 @@
     box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
     border-radius: 6px;
     z-index: 1;
-
-    max-height: 300px; 
-    overflow-y: auto;  
+    max-height: 300px;
+    overflow-y: auto;
 }
 
 .dropdown-content a {
@@ -77,33 +81,19 @@
 
 .card {
     background: #ffffff;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.15);
     padding: 10px;
     text-align: center;
-}
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.card p {
-    margin-top: 10px;
-    font-weight: 600;
-}
-
-.card {
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-    padding: 10px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform-style: preserve-3d;
     cursor: pointer;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
 
 .card img {
     width: 100%;
@@ -112,38 +102,12 @@
 }
 
 .card:hover img {
-    transform: scale(1.05);
-}
-
-.card {
-    width: 100%;
-
-    perspective: 800px;
-}
-
-.card-inner {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 10px;
-    text-align: center;
-    transition: transform 0.15s ease-out, box-shadow 0.3s ease;
-    transform-style: preserve-3d;
-
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-}
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
+    transform: scale(1.04);
 }
 
 .card p {
-    margin: 10px 0;
+    margin-top: 10px;
     font-weight: 600;
-}
-
-.card:hover .card-inner {
-    box-shadow: rotateX(5deg) rotateY(-5deg);
 }
 
 .toggle-btn {
