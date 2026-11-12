@@ -81,6 +81,14 @@ body {
     padding: 20px;
 }
 
+/* LAYOUT COM 1 CARD POR LINHA */
+.grid-1 .card {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 400px;
+    justify-self: center;
+}
+
 /* LAYOUT COM 2 CARDS POR LINHA */
 .grid-2 .card {
     grid-column: span 6;
