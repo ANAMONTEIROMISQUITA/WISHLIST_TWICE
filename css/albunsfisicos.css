@@ -1,0 +1,189 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e3abd3;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(90deg, #ffffff, #F3CB3A);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #55A5E4;
+    border: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    color: white;
+}
+
+.dropbtn:hover {
+    background-color: #2c6ea0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 140px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    border-radius: 6px;
+    z-index: 1;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #2c6ea0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* GRID DOS CARDS */
+.card-container {
+    margin: 30px auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px;
+    padding: 20px;
+}
+
+/* CARDS */
+.card {
+    grid-column: span 2;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* PRIMEIRA CAIXA - CENTRALIZADA */
+.card:first-child {
+    grid-column: 3 / span 2;
+}
+
+/* SEGUNDA E TERCEIRA CAIXAS */
+.card:nth-child(2) {
+    grid-column: 2 / span 2;
+}
+
+.card:nth-child(3) {
+    grid-column: 4 / span 2;
+}
+
+/* EFEITO HOVER */
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.04);
+}
+
+.card p {
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* BOTÃO DE COLEÇÃO */
+.toggle-btn {
+    margin-top: 10px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    background: #ff7f8a;
+    color: white;
+    transition: 0.2s;
+}
+
+.toggle-btn.have {
+    background: #4CAF50;
+}
+
+/* TÍTULO DA ERA */
+.era-title {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #1a5685;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.15);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+    .card-container {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .card,
+    .card:first-child,
+    .card:nth-child(2),
+    .card:nth-child(3) {
+        grid-column: span 2;
+    }
+
+    .card:first-child {
+        grid-column: 3 / span 2;
+    }
+
+    .card:nth-child(2) {
+        grid-column: 2 / span 2;
+    }
+
+    .card:nth-child(3) {
+        grid-column: 4 / span 2;
+    }
+
+    .era-title {
+        font-size: 24px;
+    }
+}
